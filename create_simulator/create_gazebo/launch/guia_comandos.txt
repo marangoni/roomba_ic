@@ -1,0 +1,55 @@
+*** Comandos para executar o simulador Gazebo e o Rviz ***
+
+1) Para rodar o Gazebo com o Roomba no ambiente do labirinto
+
+roslaunch create_gazebo maze.launch
+
+2) Para controlar o roomba dentro do labirinto
+
+- Carregar o controlador do xbox 360 (joy)
+
+- Conectar o dongle bluetooth na porta USB, aguardar alguns segundos, ligar o controle apertando a tecla prateada
+
+- Num terminal, após executar: source devel/setup.bash
+
+rosrun joy joy_node dev:=/dev/input/js0
+
+- Confirme se o joystick está enviando a mensagem /joy
+
+- Num terminal:
+
+rostopic echo /joy
+
+- Ao movimentar o controle os números deverão ser alterados
+
+- Carregar o conversor das mensagens /joy para /cmd_vel (que controlam o roomba)
+
+rosrun teleop_twist_joy teleop_node
+
+- Confirme se as mensagens para o tópico /cmd_vel estão sendo emitidas
+
+rostopic echo /cmd_vel
+
+- Neste ponto deve ser possível controlar o roomba no GAZEBO no ambiente labirinto com o joystick (Use a tecla A para ele andar
+  e o controle direcional da direita para controlar a direção.
+  
+3) Para visualizar a organização dos tópicos do ROS
+
+rqt
+
+- Para controlar o robô se o joystick não estiver funcionando, no rqt
+
+plugins -> Robot Tools -> Robot Steering  (publica diretamente no cmd_vel)
+
+
+4) Para visualizar o robô no Rviz (morfologia, links, juntas,...)
+
+rosrun rviz rviz -d ~/ROSprojects/roomba_project/catkin_ws/src/create_gazebo/config/setup.rviz
+
+
+
+
+
+
+
+

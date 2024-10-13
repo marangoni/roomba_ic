@@ -1,0 +1,10 @@
+Referẽncias para simulação:
+
+https://nnarain.github.io/2020/12/27/ROS-Development-Environment-on-Windows-10-using-Docker.html
+
+https://nnarain.github.io/2021/01/03/iRobot-Create-2-Simulation.html
+
+https://nnarain.github.io/2021/01/06/iRobot-Create-2-Navigation.html
+
+https://nnarain.github.io/2021/01/03/iRobot-Create-2-Simulation.html
+
