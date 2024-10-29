@@ -1,0 +1,20 @@
+Pacote com os arquivos para carregamento (launch) do roomba
+
+* roomba_joy.launch - carrega o roomba para controle via joystick
+*** ATENÇAO: Depois de executar o comando roslaunch roomba_robot roomba_joy.launch desconectar e conectar novamente
+o dongle do joystick para que ele seja reconhecido.
+
+* roomba_lidar.launch - carrega o roomba com o Lidar para movimentação com o joystick e 
+exibição no rviz
+*** ATENÇAO: Para poder visualizar a saída do Lidar no Rviz é necessário realizar o acesso
+via ssh habilitando a interface grafica com o comando ssh -X nuria@roomba.local
+
+* roomba_go.launch - carrega o roomba para movimento autonomo
+
+* roomba_go_lidar.launch - carrega o roomba para movimento autonomo e lidar com exibição no
+rviz
+*** ATENÇAO: Para poder visualizar a saída do Lidar no Rviz é necessário realizar o acesso
+via ssh habilitando a interface grafica com o comando ssh -X nuria@roomba.local
+
+* roomba_cam.launch - carrega o roomba para controle com o joystick e visualização da 
+pela camera IR no Rviz

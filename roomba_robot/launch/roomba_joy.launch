@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Carrega o driver  -->
+  <include file="$(find create_bringup)/launch/create_2.launch" /> 
+
+  <!-- Carrega o joystick  -->
+  <include file="$(find create_bringup)/launch/joy_teleop.launch" /> 
+
+</launch>

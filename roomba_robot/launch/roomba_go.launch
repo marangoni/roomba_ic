@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Carrega o move roomba  -->
+  <include file="$(find move_roomba)/launch/move.launch" /> 
+
+</launch>

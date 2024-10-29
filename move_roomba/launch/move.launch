@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- Carrega o driver  -->
+  <include file="$(find create_bringup)/launch/create_2.launch" /> 
+
+<!-- Carrega o controle de movimento  -->
+<node pkg="move_roomba" type="move2.py" name="move2">
+  </node>
+
+</launch>

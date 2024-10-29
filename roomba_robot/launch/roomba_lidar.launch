@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+
+  
+  <!-- Carrega o LiDAR  -->
+  <include file="$(find ldlidar_stl_ros)/launch/ld19.launch" />
+  <node name="rviz_show_ldlidar" pkg="rviz" type="rviz" args="-d $(find roomba_robot)/config/lidar.rviz" required="true"/>
+  
+  <!-- Carrega o driver  -->
+  <include file="$(find create_bringup)/launch/create_2.launch" /> 
+
+  <!-- Carrega o joystick  -->
+  <include file="$(find create_bringup)/launch/joy_teleop.launch" /> 
+
+</launch>

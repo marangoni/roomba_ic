@@ -4,15 +4,15 @@ teleop:
     type: topic
     message_type: "geometry_msgs/Twist"
     topic_name: cmd_vel
-    deadman_buttons: []  # No deadman buttons
+    deadman_buttons: [0]  # Botão "A" (botão 0) é o deadman button
     axis_mappings:
       -
-        axis: 4  # Right thumb (up/down)
+        axis: 1  # Left thumb stick (up/down)
         target: linear.x
-        scale: 0.4
+        scale: 0.05
         offset: 0.0
       -
-        axis: 3  # Right thumb stick (left/right)
+        axis: 0  # Left thumb stick (left/right)
         target: angular.z
-        scale: 2.5
+        scale: 0.5
         offset: 0.0
